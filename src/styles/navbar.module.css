@@ -1,0 +1,70 @@
+/*.ContainerWrapper{*/
+/*    background-color: var( --bg-color) !important;*/
+/*    box-shadow: none;*/
+/*}*/
+/*.ChildWrapper{*/
+/*    width: 100%;*/
+/*    max-width: 1300px;*/
+/*    margin: 10px auto;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*}*/
+/*.Logo{*/
+/*    color: var(--bg-color) !important;*/
+/*    text-decoration: none;*/
+/*    font-size: 2rem;*/
+/*    font-weight: bold;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/* Example styles for Navbar */
+.containerWrapper {
+    background-color: var( --bg-color) !important;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.childWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var( --text-color) !important;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+}
+
+.menuIcon {
+    display: none;
+}
+
+.desktopNav button {
+    margin-right: 15px;
+}
+
+.themeToggle {
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+}

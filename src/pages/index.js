@@ -14,7 +14,7 @@ export default function Home({ data }) {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem blanditiis distinctio
                         eligendi ipsum itaque iusto minus perspiciatis? A consequuntur cumque dolor ex fugiat in, nisi
                         porro similique voluptatem voluptatum.</p>
-                    <Link to='/projects' className={btn}>My Portfolio</Link>
+                    <Link to='/src/pages/blog' className={btn}>My Portfolio</Link>
                 </div>
                 {/* Ensure the image data exists and has the expected structure */}
                 {data.file.childImageSharp && (

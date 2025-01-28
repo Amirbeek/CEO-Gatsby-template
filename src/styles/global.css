@@ -1,40 +1,43 @@
 /* Reset some basic elements */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+    --baseline: 24px;
+    --space-sm: calc(var(--baseline) / 2);
+    --space-md: var(--baseline);
+    --space-lg: calc(var(--baseline) * 2);
+    --space-xl: calc(var(--baseline) * 3);
+}
+
+:root {
+    --bg-color: #f4f5ef;
+    --text-color: #000000;
+    --primary-color: #5a2de4;
+    --primary-white: #f4f5ef;
+}
+
+[data-theme='dark'] {
+    --bg-color: #191818;
+    --text-color: #f4f5ef;
+}
 
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     font-family: "Montserrat";
-    color: white;
 }
 html,body{
     min-height: 100%;
 }
 body{
-    background: radial-gradient(at top left,rebeccapurple 0%, rgba(43,9,107,1) 100%);
+    background: var(--bg-color);
     background-repeat: no-repeat;
-    padding: 0 20px;
 }
 p{
     padding: 0;
     margin:0;
 }
-/* Styling buttons */
 
-nav {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 40px auto;
-    align-items: center;
-
-}
-
-nav .links{
-    display: inline-block;
-    text-align: right;
-}
 nav  a{
     display: inline-block;
     margin-left: 20px;
