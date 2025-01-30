@@ -1,0 +1,56 @@
+.MainWrapper{
+    padding: 100px 0px;
+    text-align: left;
+
+}
+h1 {
+    color:var(--text-color);
+    line-height: 72px;
+    margin-top: 18px;
+    font-size: 60px;
+    font-weight: 700;
+    .short-name {
+        color: #828282;
+    }
+}
+.PrimaryText{
+    color: var(--primary-color) !important;
+}
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+.Icon{
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: var(--icon);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.Icon img{
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out!important;
+
+}
+.Icon:hover{
+    background-color: #f2994a;
+    transform: scale(1.1);
+
+}
+.Icon:hover img{
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}

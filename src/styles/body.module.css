@@ -1,0 +1,23 @@
+.bg-color {
+    background-color: var(--icon);
+    padding: 3.5rem;
+    border-radius: 30px;
+    color: var(--text-color);
+
+}
+.bg-color img{
+    border-radius: 30px;
+}
+
+.url{
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+.url:hover{
+    text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+    .bg-color {
+        padding: 2rem;
+    }
+}

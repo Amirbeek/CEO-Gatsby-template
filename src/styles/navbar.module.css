@@ -1,41 +1,30 @@
-/*.ContainerWrapper{*/
-/*    background-color: var( --bg-color) !important;*/
-/*    box-shadow: none;*/
-/*}*/
-/*.ChildWrapper{*/
-/*    width: 100%;*/
-/*    max-width: 1300px;*/
-/*    margin: 10px auto;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*}*/
-/*.Logo{*/
-/*    color: var(--bg-color) !important;*/
-/*    text-decoration: none;*/
-/*    font-size: 2rem;*/
-/*    font-weight: bold;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
 
-/* Example styles for Navbar */
 .containerWrapper {
     background-color: var( --bg-color) !important;
-    padding: 10px 20px;
+    padding: 20px 8%;
     display: flex;
     flex-direction: column;
+    box-shadow: none!important;
     justify-content: space-between;
 }
-
+.lgcm{
+   font-weight: bold;
+    color: var(--primary-color) !important;
+}
 .childWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.Button{
+    color: var(--text-color) !important;
+}
+.Button:hover{
+    color: var(--primary-color) !important;
+}
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: var( --text-color) !important;
@@ -47,24 +36,25 @@
 }
 
 .menuIcon {
-    display: none;
+    display: none!important;
+    margin-top: 6px!important;
 }
 
-.desktopNav button {
-    margin-right: 15px;
+.menuIcon  svg{
+    color: var(--text-color)!important;
 }
 
-.themeToggle {
-    cursor: pointer;
-}
 
-/* Mobile styles */
+
 @media (max-width: 768px) {
+    .logo{
+        font-size: 1.4rem;
+    }
     .desktopNav {
-        display: none;
+        display: none!important;
     }
 
     .menuIcon {
-        display: block;
+        display: block!important;
     }
 }

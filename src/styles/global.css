@@ -1,5 +1,4 @@
 /* Reset some basic elements */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 :root {
     --baseline: 24px;
     --space-sm: calc(var(--baseline) / 2);
@@ -9,22 +8,25 @@
 }
 
 :root {
-    --bg-color: #f4f5ef;
+    --bg-color: #f6f6f6;
     --text-color: #000000;
     --primary-color: #5a2de4;
-    --primary-white: #f4f5ef;
+    --primary-white: #f6f6f6;
+    --icon: #dbdbdb
 }
 
 [data-theme='dark'] {
     --bg-color: #191818;
     --text-color: #f4f5ef;
+    --icon: #2d2d2d;
 }
 
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: "Montserrat";
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 html,body{
     min-height: 100%;
@@ -33,21 +35,7 @@ body{
     background: var(--bg-color);
     background-repeat: no-repeat;
 }
-p{
-    padding: 0;
-    margin:0;
-}
 
-nav  a{
-    display: inline-block;
-    margin-left: 20px;
-    font-weight: 400;
-    padding-bottom: 8px;
-    border-bottom: 3px solid transparent;
-}
-nav a:hover{
-    border-color: white;
-}
 footer {
     text-align: center;
     padding: 10px 0;

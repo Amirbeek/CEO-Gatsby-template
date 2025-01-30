@@ -26,7 +26,7 @@ export default function Navbar() {
 
     console.log(styles.containerWrapper)
     const [anchorEl, setAnchorEl] = useState(null);
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState(localStorage.getItem("theme"));
     const [showDialog, setShowDialog] = useState(false);
 
     const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
@@ -35,6 +35,8 @@ export default function Navbar() {
     function toggleTheme() {
         const currentTheme = document.body.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme)
+        localStorage.setItem('theme', newTheme);
         document.body.setAttribute('data-theme', newTheme);
     }
 
@@ -56,23 +58,13 @@ export default function Navbar() {
 
             <div className={styles.childWrapper}>
                 <Link to="/" className={styles.logo}>
-                    AmirbekShom <span>_</span>
+                    AmirbekShom <span className={styles.lgcm}>_</span>
                 </Link>
 
-                {/* Navigation Links */}
                 <div className={styles.navLinks}>
-                    {/* Hamburger Menu for Mobile */}
-                    <IconButton
-                        className={styles.menuIcon}
-                        onClick={handleDrawerToggle}
-                        aria-label="Open menu"
-                    >
-                        <FaBars />
-                    </IconButton>
-
                     <nav className={styles.desktopNav}>
-                        <Button href="/blog">Blog</Button>
-                        <Button onClick={handleMenuClick}>Resume</Button>
+                        <Button href="/blog" className={styles.Button}>Blog</Button>
+                        <Button onClick={handleMenuClick}  className={styles.Button}>Resume</Button>
                         <Menu
                             anchorEl={anchorEl}
                             open={Boolean(anchorEl)}
@@ -93,21 +85,27 @@ export default function Navbar() {
                             href="https://github.com/Amirbeek"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className={styles.Button}
                         >
                             Github
                         </Button>
-                        <Button href="/contact">Contact</Button>
+                        <Button href="/contact" className={styles.Button}>Contact</Button>
                     </nav>
 
-                    {/* Theme Toggle */}
-                    <div className={styles.themeToggle} onClick={toggleTheme}>
-                        {theme === "light" ? (
-                            <FaSun size={24} color="#f2994a" />
-                        ) : (
-                            <FaMoon size={24} />
-                        )}
-                    </div>
+                    <IconButton onClick={toggleTheme}>
+                        {theme === 'light' ? <FaSun size={24} color="#f2994a"/> : <FaMoon size={24} color="#f2994a"/>}
+                    </IconButton>
+                    <IconButton
+                        className={styles.menuIcon}
+                        onClick={handleDrawerToggle}
+                        aria-label="Open menu"
+                    >
+                        <FaBars />
+                    </IconButton>
+
                 </div>
+
+
             </div>
 
             <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
