@@ -5,10 +5,26 @@
     color: var(--text-color);
 
 }
+.bg-white {
+    background-color:  var(--icon) !important;
+}
+.bg-padding{
+    padding: 2.2rem;
+}
+.bg-white span{
+    color: #f2994a;
+}
 .bg-color img{
+    font-weight: bold;
     border-radius: 30px;
 }
 
+.bg-white a{
+    color: var(--primary-color) !important;
+}
+.bg-white a:hover {
+    text-decoration: underline;
+}
 .url{
     font-weight: bold;
     color: var(--primary-color) !important;
@@ -20,4 +36,28 @@
     .bg-color {
         padding: 2rem;
     }
+}
+
+.imgWrapper{
+    overflow: hidden;
+}
+.imgWrapper a{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.img-full{
+    background-size: cover;
+    background-repeat: no-repeat ;
+    width: 100%;
+    border-radius: inherit;
+    z-index: -1;
+    @media only screen and (max-width: 600px) {
+        height: auto;
+    }
+}
+.img-main-full {
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
 }

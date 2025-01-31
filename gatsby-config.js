@@ -30,9 +30,6 @@ module.exports = {
     `gatsby-transformer-remark`,
   ],
   siteMetadata: {
-    // title: "Web Warrior",
-    // description: "Web dev portfolio",
-    // copyright: "This website is about my first website",
     contact: "amirbek.shomurodov01@gmail.com",
     bld: [
       {
@@ -45,7 +42,7 @@ module.exports = {
           Behance: "https://www.behance.net/gallery/216938563/Minidesk-Project-Overview",
         },
         highlight: "Feature Highlight",
-        path: "./diagram.png",
+        path: "./images/diagram.png",
         additional: ["./images/minidesk.png", "./images/minidesk1.png"],
       },
       {
@@ -54,11 +51,11 @@ module.exports = {
             "Developed under the supervision of <a href='https://www.brunel.ac.uk/people/weibo-liu1'>Dr. Weibo Liu</a>, this web application harnesses the power of a deep learning Convolutional Neural Network (CNN) to detect COVID-19 from medical images.<br/><br/>The application is engineered using <span>Flask</span>, styled with <span>Tailwind CSS</span> for a clean and modern user interface, and deployed on <span>Heroku</span> for widespread accessibility. The robust model is securely stored and managed on <span>Amazon S3</span>, ensuring high performance and scalability.",
         links: {
           GitHub: "https://github.com/Amirbeek/COVID-19-Detector-Web-Application",
-          PagePath: "/gitglobe",
+          PagePath: "/covid",
           Demo: "https://github-globe-visualization.vercel.app",
         },
         highlight: "Feature Highlight",
-        path: "./covid-detector.png",
+        path: "./images/covid-detector.png",
         additional: [],
       },
       {
@@ -71,7 +68,7 @@ module.exports = {
           Demo: "https://github-globe-visualization.vercel.app",
         },
         highlight: "Feature Highlight",
-        path: "./GitHub_Globe1.png",
+        path: "./images/GitHub_Globe1.png",
         additional: [],
       },
       {
@@ -84,7 +81,7 @@ module.exports = {
           Video: "https://www.youtube.com/watch?v=UzrsrJYfmdY",
         },
         highlight: "Feature Highlight",
-        path: "./Flight.jpg",
+        path: "./images/Flight.jpg",
         additional: [],
       },
     ],

@@ -1,26 +1,25 @@
 import * as React from "react"
 import Layout from "../Layout";
-import { header, btn } from "../styles/home.module.css";
-import {graphql, Link} from "gatsby";
-import Img from 'gatsby-image';
+import {graphql} from "gatsby";
+import Header from "../components/Header";
+import Body from "../components/Body";
+import Projects from "../components/Projects";
+import {Typography} from "@mui/material";
 
 export default function Home({ data }) {
+    const projects = data.site.siteMetadata.bld
+    const icon =data.file.childImageSharp.fluid
     return (
         <Layout>
-            <section className={header}>
-                <div>
-                    <h2> Design </h2>
-                    <h3>Develop & Deploy</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem blanditiis distinctio
-                        eligendi ipsum itaque iusto minus perspiciatis? A consequuntur cumque dolor ex fugiat in, nisi
-                        porro similique voluptatem voluptatum.</p>
-                    <Link to='/src/pages/blog' className={btn}>My Portfolio</Link>
-                </div>
-                {/* Ensure the image data exists and has the expected structure */}
-                {data.file.childImageSharp && (
-                    <Img fluid={data.file.childImageSharp.fluid} />
-                )}
-            </section>
+            <Header Icon={icon} />
+            <div className="mt"></div>
+            <Body/>
+            <Typography variant="h3" className='mt' gutterBottom >
+                Projects
+            </Typography>
+            {projects.map(project =>(
+                <Projects projects={project} />
+            ))}
         </Layout>
     );
 }
@@ -34,5 +33,23 @@ export const query = graphql`
                 }
             }
         }
+         site {
+    siteMetadata {
+      bld {
+        additional
+        description
+        highlight
+        links {
+          Behance
+          Demo
+          GitHub
+          PagePath
+          Video
+        }
+        path
+        title
+      }
     }
+  }
+ }
 `;

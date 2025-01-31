@@ -25,10 +25,10 @@ export default function  Body() {
                         </Typography>
                     </div>
                 </Grid>
-                <Grid item xs={12} md={6} sx={{display: 'flex',alignItems:'center', justifyContent: 'center'}}>
+                <Grid item xs={12} md={6} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                     <img
                         src='./main.png'
-                        alt="Amirbek's picture"
+                        alt="Amirbek Shomurodov"
                         width="100%"
                         height="100%"
                     />
