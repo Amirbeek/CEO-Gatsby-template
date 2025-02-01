@@ -13,10 +13,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@cursorify/react": "^0.0.39",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.2",
     "@mui/material": "^6.4.1",
+    "@mui/styles": "^6.4.2",
     "dompurify": "^3.2.4",
     "framer-motion": "^12.0.6",
     "gatsby": "^5.14.1",
@@ -31,6 +33,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.4.0",
+    "react-syntax-highlighter": "^15.6.1",
     "react-typed": "^2.0.12",
     "sharp": "^0.33.5"
   },

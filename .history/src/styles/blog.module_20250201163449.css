@@ -1,0 +1,68 @@
+.portfolio{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.portfolio > h2{
+    font-size: 3em;
+    margin-top: 80px;
+}
+.CardWrapper{
+    transition: 1s;
+    height: 350px;  /* Set fixed height */
+    background-color: ${props => props.theme.face_color};
+    color: ${props => props.theme.text_color_header};
+    cursor: pointer;
+}
+
+.Button{
+    display: inline-flex;  
+    align-items: center;  
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: #3912af;
+    }
+}
+.Type{
+    color: #f2994a;
+    font-weight: bolder;
+}
+.icon{
+    display: flex; /* Treats the icon itself as a flex container */
+    align-items: center;
+    margin-left: .3rem;
+}
+.portfolio > h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+.project{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 80px;
+    text-align: center;
+    margin: 80px 20px;
+}
+
+.project h3{
+    text-align: center;
+    margin: 20px auto 0;
+    font-weight: 500;
+}
+.project p{
+    color: #ccc;
+    margin-top: 4px;
+}
+.imgStyle{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 6px solid var(--primary-color);
+}
