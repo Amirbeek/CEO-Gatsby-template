@@ -31,7 +31,7 @@ html,body{
     min-height: 100%;
 }
 .mt{
-    margin-top: var(--space-lg);
+    margin-top: var(--space-lg) !important;
 }
 body{
     background: var(--bg-color);

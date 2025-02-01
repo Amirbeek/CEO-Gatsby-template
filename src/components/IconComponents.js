@@ -6,11 +6,10 @@ import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-const Icon_url = ({ links }) => {
+const IconComponents = ({ links }) => {
     const handleClick = () => {
         localStorage.setItem('project', JSON.stringify(links));
     };
-    console.log(links)
     const link = links
     return (
         <div>
@@ -43,4 +42,4 @@ const Icon_url = ({ links }) => {
     );
 };
 
-export default Icon_url;
+export default IconComponents;

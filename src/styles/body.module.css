@@ -46,18 +46,7 @@
     padding: 0;
     display: block;
 }
-.img-full{
-    background-size: cover;
-    background-repeat: no-repeat ;
-    width: 100%;
-    border-radius: inherit;
-    z-index: -1;
-    @media only screen and (max-width: 600px) {
-        height: auto;
-    }
-}
+
 .img-main-full {
-    height: 100vh;
-    width: 100%;
-    object-fit: fill;
+    width: 100% !important;
 }

@@ -42,8 +42,8 @@ module.exports = {
           Behance: "https://www.behance.net/gallery/216938563/Minidesk-Project-Overview",
         },
         highlight: "Feature Highlight",
-        path: "./images/diagram.png",
-        additional: ["./images/minidesk.png", "./images/minidesk1.png"],
+        path: "diagram.png",
+        additional: ["minidesk.png", "minidesk1.png"],
       },
       {
         title: "COVID-19 Detector Web Application",
@@ -55,7 +55,7 @@ module.exports = {
           Demo: "https://github-globe-visualization.vercel.app",
         },
         highlight: "Feature Highlight",
-        path: "./images/covid-detector.png",
+        path: "covid-detector.png",
         additional: [],
       },
       {
@@ -68,20 +68,20 @@ module.exports = {
           Demo: "https://github-globe-visualization.vercel.app",
         },
         highlight: "Feature Highlight",
-        path: "./images/GitHub_Globe1.png",
+        path: "GitHub_Globe1.png",
         additional: [],
       },
       {
         title: "Flight Booking System",
         description:
-            "This system, developed using <span>Java Swing</span>, transforms the flight booking process by incorporating interactive maps that simplify user navigation.<br/><br/>Additionally, it allows users to purchase food and products directly from the interface, integrating travel with retail options seamlessly.<br/><br/>Supervised by <a href='https://www.brunel.ac.uk/people/zear-ibrahim'>Zear Ibrahim</a> from Brunel University, I led the project's design and development, functioning as both the Java developer and system designer. The project, created for <span>Java GUI</span>, demonstrates innovative potential for comprehensive travel and retail solutions within a single platform.",
+            "This system, developed using <span>Java Swing</span>, transforms the flight booking process by incorporating interactive maps that simplify user navigation.<br/><br/>Additionally, it allows users to purchase food and products directly from the interface, integrating travel with retail options seamlessly.<br/><br/>Supervised by <a href='https://www.brunel.ac.uk/people/zear-ibrahim'>Dr. Zear Ibrahim</a> from Brunel University, I led the project's design and development, functioning as both the Java developer and system designer. The project, created for <span>Java GUI</span>, demonstrates innovative potential for comprehensive travel and retail solutions within a single platform.",
         links: {
           GitHub: "https://github.com/Amirbeek/Flight_System",
           Behance: "https://www.behance.net/gallery/216384021/Flight-Booking-System",
           Video: "https://www.youtube.com/watch?v=UzrsrJYfmdY",
         },
         highlight: "Feature Highlight",
-        path: "./images/Flight.jpg",
+        path: "Flight.jpg",
         additional: [],
       },
     ],

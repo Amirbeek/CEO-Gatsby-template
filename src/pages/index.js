@@ -5,10 +5,14 @@ import Header from "../components/Header";
 import Body from "../components/Body";
 import Projects from "../components/Projects";
 import {Typography} from "@mui/material";
+import More from "../components/More";
 
 export default function Home({ data }) {
     const projects = data.site.siteMetadata.bld
     const icon =data.file.childImageSharp.fluid
+    const imgData = data.allFile.edges
+    console.log(imgData)
+    console.log(icon)
     return (
         <Layout>
             <Header Icon={icon} />
@@ -18,8 +22,12 @@ export default function Home({ data }) {
                 Projects
             </Typography>
             {projects.map(project =>(
-                <Projects projects={project} />
+                <Projects projects={project} imgData={imgData} key={project.title} />
             ))}
+            <Typography variant="h3" className='mt' gutterBottom >
+                More
+            </Typography>
+            <More/>
         </Layout>
     );
 }
@@ -48,6 +56,21 @@ export const query = graphql`
         }
         path
         title
+      }
+    }
+  }
+   allFile(
+    filter: {sourceInstanceName: {eq: "images"}, relativePath: {glob: "main/*"}}
+  ) {
+    edges {
+      node {
+        childImageSharp {
+         
+         fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                  originalName
+              }
+        }
       }
     }
   }

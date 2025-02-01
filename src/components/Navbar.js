@@ -53,6 +53,7 @@ export default function Navbar() {
                     height: 6,
                     originX: 0,
                     backgroundColor: "#5a2de4",
+                    zIndex: 1000
                 }}
             />
 
