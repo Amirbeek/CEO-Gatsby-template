@@ -4,6 +4,7 @@ import './styles/global.css'
 import { ThemeProvider } from "./context/ThemeContext";
 import {Container} from "@mui/material";
 import {CursorifyProvider, DefaultCursor} from '@cursorify/react'
+import Footer from "./components/Footer";
 
 export default function Layout({ children }) {
     return (
@@ -19,9 +20,7 @@ export default function Layout({ children }) {
             <Container fixed>
                 {children}
             </Container>
-            <footer>
-                <p>Copyright 2025 Web Warrior</p>
-            </footer>
+            <Footer/>
             </CursorifyProvider>
         </ThemeProvider>
     );

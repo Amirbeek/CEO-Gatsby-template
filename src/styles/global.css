@@ -12,12 +12,23 @@
     --primary-color: #5a2de4;
     --primary-white: #f6f6f6;
     --icon: rgb(242, 242, 242);
+    --bg-contact: #F7F8FE;
+    --contact-input: #F7F8FE;
+    --border-color: #d3d6e7;
 }
-
+.url{
+    color: var(--primary-color) !important;
+}
+.url:hover{
+    text-decoration: underline;
+}
 [data-theme='dark'] {
     --bg-color: #191818;
     --text-color: #c4cdd5;
     --icon: #2d2d2d;
+    --bg-contact: #191818;
+    --contact-input:#2D2D2D;
+    --border-color: #2d2d2d;
 }
 
 *{

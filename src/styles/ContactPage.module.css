@@ -1,0 +1,50 @@
+.containerWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactPaper {
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-contact) !important;
+}
+
+
+.inputField input {
+    color: var(--text-color);
+}
+
+.inputField label {
+    color: var( ) !important;
+}
+.inputField {
+    background-color: var(--contact-input) !important;
+    border-radius: 5px;
+}
+
+
+
+
+/* Label Color */
+.inputLabel {
+    color: var(--text-color) !important;
+    border-color: #5a2de4!important;
+
+}
+
+
+.contactImage {
+    height: 100%;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/contact.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}

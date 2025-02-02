@@ -13,3 +13,39 @@
 .featured{
     margin-bottom: 40px;
 }
+.type{
+    color: #f2994a;
+    font-weight: bold;
+}
+.ops {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.myImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid var(--primary-color);
+}
+
+.textWrapper {
+    /*display: flex;*/
+    align-items: center;
+    text-align: left;
+    max-width: 600px;
+    color: var(--text-color);
+}
+.back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.arrow{
+    width: 50px!important;
+    height: 50px!important;
+    color: var(--primary-color);
+}
