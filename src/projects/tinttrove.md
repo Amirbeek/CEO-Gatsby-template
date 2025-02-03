@@ -6,9 +6,30 @@ date: 2021-01-01T00:00:00+00:00
 thumb: ../images/main/Tint.png
 featuredImg: ../images/main/Tint.png
 ---
+### Inspiration
+As a daily user of Figma, I often leverage its image color picker, which I find not only useful but also beautifully designed. This tool inspired me to develop a similar feature for my own website that adheres to the intuitive and modern design principles seen in Figma.
+![Instpiration Image](/tintrove/figma.png)
+### Tinthrove Design Approach
 
-Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem ninja ipsum modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in ninja futurum.
+In crafting Tinthrove, I scoured numerous templates and visual assets from the [Figma Community](https://www.figma.com/community) for inspiration. My goal was to forge a design that stands out by incorporating vibrant animations and colors. For this purpose, I integrated Tailwind CSS for its utility-first styling and GSAP for smooth animations. The backend development was powered by Flask.
 
-### Lorem ninja ipsum dolor
+### Creating the Color Classifier
+The Color Classifier was engineered using the K-Means clustering algorithm. This tool effectively groups similar colors from images, which simplifies the design process and enhances data visualization by providing a palette of dominant colors based on their **RGB values**.
+```javascript
+def get_colors(image, number_of_colors):
+    reshaped_image = image.reshape(image.shape[0] * image.shape[1], 3)
+    clf = KMeans(n_clusters=number_of_colors)
+    labels = clf.fit_predict(reshaped_image)
+    counts = Counter(labels)
+    center_colors = clf.cluster_centers_
+    ordered_colors = [center_colors[i] for i in counts.keys()]
+    return ordered_colors
+```
+![image](/tintrove/my_KmeanAlgo.png)
 
-Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum. Mirum ninja est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem ninja ipsum modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in ninja futurum.
+### Deployment and Challenges
+After rigorous testing and further refining the design, I deployed my application on Heroku using GitHub. This setup enables continuous integration, meaning [Heroku](https://heroku.com/) automatically fetches and deploys new builds upon code changes. Initially, I attempted to deploy on Vercel; however, Vercel's 250 MB limit proved restrictive, leading to an unsuccessful first attempt. Consequently, I decided to switch to Heroku, leveraging the benefits offered through the GitHub Student Pack, which provides additional resources for deployment.
+![tint.gif](/tintrove/tint.gif)
+
+You can view the source code here: [Source Code](https://github.com/Amirbeek/TintTrove), and a live demo is available here: [Live Demo](https://tinttrove-66532836a19d.herokuapp.com/).
+

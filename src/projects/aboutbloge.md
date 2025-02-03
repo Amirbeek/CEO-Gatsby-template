@@ -44,5 +44,10 @@ The default template was looking pretty good, however, it was plain. I especiall
 ```
 
 
-![img](https://janarosmonaliev.com/assets/blogpost-1-1.png)
+![img](/Blog.png)
 I also added my own touch to the overall design of the website. I tried to use Material UI React along the way, as I was getting more confident with it. Additionally, I changed the GraphQL schema to include a flair (e.g. development, personal, academic, etc.) of the post for better visual navigation.
+
+![img](/aboutbloge/diagram.png)
+To make things easier, here is a structure of my blog that is portrayed in the highest level of abstraction possible, while retaining the overall logic.
+
+By the way, if you are a student, you can get a discount on a domain name just like I did on [Namecheap.com](https://www.namecheap.com) using [GitHub Student Developer Pack](https://education.github.com/pack).

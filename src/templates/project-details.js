@@ -57,7 +57,7 @@ const ProjectDetails = ({ data }) => {
 
                     {/* Main Content */}
                     <Grid item xs={12} sm={10} md={10} lg={10}>
-                        <div style={{ width: '100vh' }}> {/* ✅ Remove fixed width issues */}
+                        <div style={{ width: '100vh' }}>
                             <Typography
                                 variant="h3"
                                 gutterBottom
