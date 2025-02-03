@@ -8,8 +8,10 @@ const UserInfo = ({ Image, fixedDate }) => {
             sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: 2
+                gap: 2,
+                margin:' var(--space-sm) 0'
             }}
+
         >
             {/* Circular Profile Image */}
             <Box
