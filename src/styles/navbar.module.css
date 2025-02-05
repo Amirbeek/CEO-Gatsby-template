@@ -45,6 +45,14 @@
 }
 
 
+/* styles.module.css */
+.colortext .MuiListItem-root {
+    color: var(--text-color) !important;
+}
+
+.colortext .MuiListItem-root:hover {
+    color: #0056b3;
+}
 
 @media (max-width: 768px) {
     .logo{

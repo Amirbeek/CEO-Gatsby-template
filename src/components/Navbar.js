@@ -11,9 +11,11 @@ import {
     Menu,
     MenuItem,
 } from "@mui/material";
+
 import { motion, useSpring, useScroll } from "framer-motion";
 import { FaBars, FaSun, FaMoon } from "react-icons/fa";
 import * as styles from "../styles/navbar.module.css";
+import NavbarDialog from "./NavbarDialog";
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -74,7 +76,7 @@ export default function Navbar() {
                             <MenuItem onClick={() => setShowDialog(true)}>Quick View</MenuItem>
                             <MenuItem onClick={handleMenuClose}>
                                 <a
-                                    href={"./Amirbek-Shomurodov-CV.pdf"}
+                                    href={"/Amirbek-Shomurodov-CV.pdf"}
                                     download
                                     style={{ textDecoration: "none", color: "inherit" }}
                                 >
@@ -110,11 +112,11 @@ export default function Navbar() {
             </div>
 
             <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
-                <List>
-                    <ListItem button component="a" href="/blog">
+                <List className={styles.colortext}>
+                    <ListItem button component="a" href="/blog" style={{ color: 'var(--text-color)' }}>
                         <ListItemText primary="Blog" />
                     </ListItem>
-                    <ListItem button onClick={() => setShowDialog(true)}>
+                    <ListItem button onClick={() => setShowDialog(true)} style={{ color: 'var(--text-color)' }}>
                         <ListItemText primary="Resume" />
                     </ListItem>
                     <ListItem
@@ -123,14 +125,17 @@ export default function Navbar() {
                         href="https://github.com/Amirbeek"
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ color: 'var(--text-color)' }}
                     >
                         <ListItemText primary="Github" />
                     </ListItem>
-                    <ListItem button component="a" href="/contact">
+                    <ListItem button component="a" href="/contact" style={{ color: 'var(--text-color)' }}>
                         <ListItemText primary="Contact" />
                     </ListItem>
                 </List>
+
             </Drawer>
+            <NavbarDialog showDialog={showDialog}  handleDialogClose={()=> setShowDialog(false)} handelCloseView={handleMenuClose} />
         </AppBar>
     );
 }

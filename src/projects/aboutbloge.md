@@ -44,7 +44,7 @@ The default template was looking pretty good, however, it was plain. I especiall
 ```
 
 
-![img](/Blog.png)
+![img](/aboutbloge/2.png)
 I also added my own touch to the overall design of the website. I tried to use Material UI React along the way, as I was getting more confident with it. Additionally, I changed the GraphQL schema to include a flair (e.g. development, personal, academic, etc.) of the post for better visual navigation.
 
 ![img](/aboutbloge/diagram.png)

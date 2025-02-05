@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import Img from "gatsby-image";
 import Layout from "../Layout";
 import { graphql } from "gatsby";
-import {Typography, Box, Grid, Button} from "@mui/material";
+import {Typography, Grid, Button} from "@mui/material";
 import Markdown from "markdown-to-jsx";
 import "prismjs/themes/prism-okaidia.css";
 import Prism from "prismjs";
@@ -10,13 +10,14 @@ import * as styles from "../styles/project-details.module.css";
 import UserInfo from "../components/UserInfo";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { navigate } from "gatsby"
+import UnsplashGallery from "../components/UnsplashGallery";
 
 const ProjectDetails = ({ data }) => {
     const { rawMarkdownBody } = data.markdownRemark;
-    const { title, stack, featuredImg ,date} = data.markdownRemark.frontmatter;
+    const { title, stack, featuredImg ,date, slug} = data.markdownRemark.frontmatter;
     const Image = data.myImage.childImageSharp.fluid
-
-    function formatDate(isoString) {
+    const isAlbum = slug === "myalbum";
+   function formatDate(isoString) {
         const date = new Date(isoString);
         return date.toLocaleDateString('en-US', {
             month: 'long',
@@ -27,7 +28,9 @@ const ProjectDetails = ({ data }) => {
     const fixedDate = formatDate(date)
 
     useEffect(() => {
-        Prism.highlightAll();
+        if(typeof window  === 'undefined') {
+            Prism.highlightAll();
+        }
     }, [data]);
     const handleRedirect = () => {
         navigate('/blog');
@@ -57,7 +60,7 @@ const ProjectDetails = ({ data }) => {
 
                     {/* Main Content */}
                     <Grid item xs={12} sm={10} md={10} lg={10}>
-                        <div style={{ width: '100vh' }}>
+                        <div style={{ width: '100%' }}>
                             <Typography
                                 variant="h3"
                                 gutterBottom
@@ -91,7 +94,7 @@ const ProjectDetails = ({ data }) => {
                                           overrides: {
                                               code: {
                                                   component: ({ children, className }) => (
-                                                      <pre style={{ backgroundColor: '#263238', padding: '20px', width:'100%' }} className={className}>
+                                                      <pre style={{ backgroundColor: '#263238', padding: '20px', width:'90%' }} className={className}>
                                           <code>{children}</code>
                                         </pre>
                                                   ),
@@ -208,6 +211,7 @@ const ProjectDetails = ({ data }) => {
                             >
                                 {rawMarkdownBody}
                             </Markdown>
+                            {isAlbum ?  <UnsplashGallery/>: ''}
                         </div>
                     </Grid>
                 </Grid>
@@ -233,6 +237,7 @@ export const pageQuery = graphql`
         title
         stack
         date
+        slug
         featuredImg {
           childImageSharp {
             fluid {
@@ -244,6 +249,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-
-

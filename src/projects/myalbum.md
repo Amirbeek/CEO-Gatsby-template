@@ -1,7 +1,7 @@
 ---
 title: My favorite Photo albums that I discovered in 2023
 stack: Personal
-slug: myalbom
+slug: myalbum
 date: 2023-07-05T00:00:00+00:00
 thumb: ../images/featured/personal.jpg
 featuredImg: ../images/thumbs/albom.png

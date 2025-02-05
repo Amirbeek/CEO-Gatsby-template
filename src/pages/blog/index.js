@@ -8,9 +8,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Posts from '../../components/Posts'
 export default function Projects({data}) {
-    console.log(data)
     const projects = data.project.nodes
-    const contact = data.contact.siteMetadata.contact
     const Image = data.myImage.childImageSharp.fluid
     return (
         <Layout>

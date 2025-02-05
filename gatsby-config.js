@@ -69,7 +69,7 @@ module.exports = {
         links: {
           GitHub: "https://github.com/Amirbeek/COVID-19-Detector-Web-Application",
           PagePath: "/covid",
-          Demo: "https://github-globe-visualization.vercel.app",
+          Demo: "https://www.behance.net/amirbekshomuro",
         },
         highlight: "Feature Highlight",
         path: "covid-detector.png",
