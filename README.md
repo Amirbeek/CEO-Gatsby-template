@@ -18,7 +18,7 @@ Welcome to my portfolio website! This site is built with Gatsby and CSS to showc
 
 ## 📖 How to View the Website
 You can check out my live portfolio here:
-[Your Custom Domain](http://example.com)
+[Your Custom Domain](http://amirbekshomurodov.me)
 
 ## 🛠️ Installation & Setup
 To run this project locally, follow the steps below:
