@@ -1,4 +1,4 @@
-```markdown
+
 # My Portfolio Website
 
 Welcome to my portfolio website! This site is built with Gatsby and CSS to showcase my projects, experience, and skills. The website is deployed on Netlify and hosted under my custom domain purchased from Namecheap.
@@ -59,4 +59,4 @@ This portfolio is licensed under the MIT License.
 
 ## 🤝 Contributing
 Feel free to fork this repository and submit pull requests. If you find any issues or would like to suggest improvements, please open an issue on GitHub.
-```
+
