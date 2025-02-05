@@ -82,13 +82,10 @@ const ProjectDetails = ({ data }) => {
                                 {stack}
                             </Typography>
 
-                            {/* User Info */}
                             <UserInfo fixedDate={fixedDate} Image={Image}/>
 
-                            {/* Project Image */}
                             <Img fluid={featuredImg.childImageSharp.fluid} alt={title} />
 
-                            {/* Markdown Content */}
                             <Markdown className={'text-nl'}
                                       options={{
                                           overrides: {
