@@ -11,6 +11,11 @@
     color: var(--primary-color)!important; /* Try to avoid '!important' if possible */
 }
 
+.title{
+    text-align: left;  /* Default alignment */
+    display: block;    /* Make it a block element */
+    width: 100%;       /* Make the title take up the full width */
+}
 .Button{
     display: inline-flex;  
     align-items: center;  

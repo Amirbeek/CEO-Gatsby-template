@@ -28,9 +28,7 @@ const ProjectDetails = ({ data }) => {
     const fixedDate = formatDate(date)
 
     useEffect(() => {
-        if(typeof window  === 'undefined') {
-            Prism.highlightAll();
-        }
+        Prism.highlightAll();
     }, [data]);
     const handleRedirect = () => {
         navigate('/blog');
@@ -41,7 +39,15 @@ const ProjectDetails = ({ data }) => {
                 <Grid
                     container
                     spacing={0}
-                    className="mt"
+                    sx={{
+                        mt: {
+                            xs: '0',
+                            sm: '20px',
+                            md: '24px',
+                            lg: '32px',
+                        }
+                    }}
+
                     justifyContent="center"
                 >
                     <Grid

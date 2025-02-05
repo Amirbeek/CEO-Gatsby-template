@@ -58,27 +58,23 @@ export default function Projects({data}) {
               Blog Posts <ArrowDownwardIcon sx={{ fontSize: '2.1rem' ,marginLeft:'.5rem'}} />
               </Typography>
 
-              
-           
-              <Grid container  spacing={2}  className="mt">
-               
-                    {projects.map(project => (
-                       <Grid item xs={12} sm={6} md={4}>
-                        <Posts 
-                            key={project.id}
+
+
+            <Grid container spacing={2} className="mt">
+                {projects.map((project) => (
+                    <Grid item xs={12} sm={6} md={4} sx={{ display: 'flex' }} key={project.id}>
+                        <Posts
                             img={project.frontmatter.thumb.childImageSharp.fluid}
                             url={'/blog/' + project.frontmatter.slug}
                             date={project.frontmatter.date}
                             title={project.frontmatter.title}
                             type={project.frontmatter.stack}
+                            sx={{ display: 'flex', flexDirection: 'column', height: '100%' , width: '100%'}}
                         />
-                        </Grid>
-                    ))}
-                       <Grid item xs={12} sm={6} md={4}>
-                          
-                      </Grid>
-          </Grid>
-              
+                    </Grid>
+                ))}
+                <Grid item xs={12} sm={6} md={4}></Grid>
+            </Grid>
         </Layout>
     )
 }

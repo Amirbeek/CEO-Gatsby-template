@@ -17,7 +17,17 @@ export default function Layout({ children }) {
                 breakpoint={997}
             >
             <Navbar/>
-            <Container fixed>
+            <Container fixed
+                       sx={{
+                           padding: {
+                               xs: '26px',
+                               sm: '26px',
+                               md: '24px',
+                               lg: '32px',
+                               xl: '40px',
+                           },
+                       }}
+            >
                 {children}
             </Container>
             <Footer/>
