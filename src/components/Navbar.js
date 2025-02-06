@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import {
     AppBar,
@@ -26,20 +26,31 @@ export default function Navbar() {
         restDelta: 0.001,
     });
 
-    console.log(styles.containerWrapper)
     const [anchorEl, setAnchorEl] = useState(null);
-    const [theme, setTheme] = useState(localStorage.getItem("theme"));
+    const [theme, setTheme] = useState("light");
     const [showDialog, setShowDialog] = useState(false);
+
+    useEffect(() => {
+        const currentTheme = localStorage.getItem("theme") || "light";
+        setTheme(currentTheme);
+        if (typeof document !== "undefined") {
+            document.body.setAttribute('data-theme', currentTheme);
+        }
+    }, []);
 
     const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
     const handleMenuClick = (event) => setAnchorEl(event.currentTarget);
     const handleMenuClose = () => setAnchorEl(null);
+
     function toggleTheme() {
-        const currentTheme = document.body.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme)
-        localStorage.setItem('theme', newTheme);
-        document.body.setAttribute('data-theme', newTheme);
+        const currentTheme = theme === "light" ? "dark" : "light";
+        setTheme(currentTheme);
+        if (typeof document !== "undefined") {
+            document.body.setAttribute('data-theme', currentTheme);
+        }
+        if (typeof localStorage !== "undefined") {
+            localStorage.setItem('theme', currentTheme);
+        }
     }
 
     return (
@@ -67,7 +78,7 @@ export default function Navbar() {
                 <div className={styles.navLinks}>
                     <nav className={styles.desktopNav}>
                         <Button href="/blog" className={styles.Button}>Blog</Button>
-                        <Button onClick={handleMenuClick}  className={styles.Button}>Resume</Button>
+                        <Button onClick={handleMenuClick} className={styles.Button}>Resume</Button>
                         <Menu
                             anchorEl={anchorEl}
                             open={Boolean(anchorEl)}
@@ -108,7 +119,6 @@ export default function Navbar() {
 
                 </div>
 
-
             </div>
 
             <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
@@ -135,7 +145,7 @@ export default function Navbar() {
                 </List>
 
             </Drawer>
-            <NavbarDialog showDialog={showDialog}  handleDialogClose={()=> setShowDialog(false)} handelCloseView={handleMenuClose} />
+            <NavbarDialog showDialog={showDialog} handleDialogClose={() => setShowDialog(false)} handleCloseView={handleMenuClose} />
         </AppBar>
     );
 }

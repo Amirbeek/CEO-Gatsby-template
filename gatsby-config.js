@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
