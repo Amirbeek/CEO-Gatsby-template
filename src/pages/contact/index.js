@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-    Container,
     Typography,
     TextField,
     Button,
@@ -10,7 +9,6 @@ import {
     Paper,
 } from "@mui/material";
 import axios from "axios";
-import { navigate } from "gatsby";
 import * as styles from "../../styles/ContactPage.module.css";
 import Layout from "../../Layout";
 

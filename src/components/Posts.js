@@ -26,7 +26,7 @@ export default function Post({ img, title, type, date ,url}) {
       </CardMedia>
       <CardContent sx={{ textAlign: 'left', height: '100%'}}  >
         <Typography variant="body2" >
-          <span className={styles.Type}>{type}</span> · <span>{formattedDate}</span>
+          <span className={type=== 'Personal'? styles.Type2 : styles.Type}>{type}</span> · <span>{formattedDate}</span>
         </Typography>
         <Typography variant="h6" component="h2" gutterBottom className={styles.title}>
           {title} 

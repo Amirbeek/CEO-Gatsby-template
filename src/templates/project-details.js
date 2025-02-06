@@ -5,7 +5,6 @@ import { graphql } from "gatsby";
 import {Typography, Grid, Button} from "@mui/material";
 import Markdown from "markdown-to-jsx";
 import "prismjs/themes/prism-okaidia.css";
-import Prism from "prismjs";
 import * as styles from "../styles/project-details.module.css";
 import UserInfo from "../components/UserInfo";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -28,7 +27,11 @@ const ProjectDetails = ({ data }) => {
     const fixedDate = formatDate(date)
 
     useEffect(() => {
-        Prism.highlightAll();
+        if (typeof window !== 'undefined' && window.localStorage) {
+            import("prismjs").then(Prism => {
+                Prism.highlightAll();
+            })
+        }
     }, [data]);
     const handleRedirect = () => {
         navigate('/blog');

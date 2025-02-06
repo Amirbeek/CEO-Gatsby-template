@@ -10,7 +10,7 @@ function Cards({ background, title, description, URL, children }) {
     }
     
     return (
-        <Box className={styles.funCard}  sx={{ backgroundImage: `url(./${background})`,}} onClick={handleNavigation}
+        <Box className={styles.funCard}  sx={{ backgroundImage: `url(./${background})`, cursor:'pointer'}} onClick={handleNavigation}
         >
                 <CardContent className={styles.CardWrapper}>
                 <Typography variant="h5" component="h1" sx={{color:'#fff'}}>
@@ -18,7 +18,6 @@ function Cards({ background, title, description, URL, children }) {
                            </Typography>
                            <Typography variant="body2" color="#d9d9d9">
                                {description}
-
                            </Typography>
                            <Typography variant="body1" color="#d9d9d9" sx={{marginTop:2}}>
                                {children}
