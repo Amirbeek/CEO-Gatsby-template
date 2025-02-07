@@ -55,7 +55,7 @@ Make sure you have the following installed on your machine:
 - Modify the CSS files located in `src/styles/` to customize the look and feel of the site.
 
 ## 📝 License
-This portfolio is licensed under the MIT License.
+This portfolio is licensed under the OBSD License.
 
 ## 🤝 Contributing
 Feel free to fork this repository and submit pull requests. If you find any issues or would like to suggest improvements, please open an issue on GitHub.
