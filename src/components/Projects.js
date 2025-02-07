@@ -17,14 +17,11 @@ export default function BodyProjects({ projects , imgData}) {
     }, []);
 
     useEffect(() => {
-
-
         let newImages = [];
 
         imgData.forEach(img => {
 
             if (img.node.childImageSharp.fluid.originalName === projects.path) {
-                console.log('IMG: ',img.node.childImageSharp.fluid)
                 newImages.push(img.node.childImageSharp.fluid);
             }
         });
@@ -41,7 +38,6 @@ export default function BodyProjects({ projects , imgData}) {
 
         updateImages(newImages);
 
-        console.log('PRO Image: ', newImages);
 
     }, [projects, imgData]);
     useEffect(() => {
@@ -105,7 +101,6 @@ export default function BodyProjects({ projects , imgData}) {
                     </>
                 )}
             </Grid>
-
         </div>
     );
 }

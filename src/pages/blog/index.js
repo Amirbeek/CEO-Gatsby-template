@@ -7,6 +7,7 @@ import * as styles from '../../styles/blog.module.css'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Posts from '../../components/Posts'
+
 export default function Projects({data}) {
     const projects = data.project.nodes
     const Image = data.myImage.childImageSharp.fluid

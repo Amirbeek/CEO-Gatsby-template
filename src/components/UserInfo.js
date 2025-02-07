@@ -13,7 +13,6 @@ const UserInfo = ({ Image, fixedDate }) => {
             }}
 
         >
-            {/* Circular Profile Image */}
             <Box
                 component={Img}
                 fluid={Image}

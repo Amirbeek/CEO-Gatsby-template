@@ -47,8 +47,6 @@ export default function Navbar() {
         setTheme(currentTheme);
         if (typeof document !== "undefined") {
             document.body.setAttribute('data-theme', currentTheme);
-        }
-        if (typeof localStorage !== "undefined") {
             localStorage.setItem('theme', currentTheme);
         }
     }
