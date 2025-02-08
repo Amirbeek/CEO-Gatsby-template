@@ -7,7 +7,7 @@ export default function  Body() {
                 <Grid item xs={12} md={6} sx={{display: 'flex',alignItems:'center', justifyContent: 'center'}}>
                     <div>
                         <Typography variant="h3" gutterBottom>
-                            AMir
+                            About Me
                         </Typography>
                         <Typography variant="h5" sx={{ fontSize: "1.25rem" }} paragraph>
                             My name is Amirbek Shomurodov. I am a student software developer. I believe in design quality and always pay attention to details because that's what makes a great product.

@@ -44,8 +44,6 @@
     color: var(--text-color)!important;
 }
 
-
-/* styles.module.css */
 .colortext .MuiListItem-root {
     color: var(--text-color) !important;
 }

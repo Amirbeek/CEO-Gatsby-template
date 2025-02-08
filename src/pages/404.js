@@ -12,7 +12,6 @@ export default function NotFound() {
                 transition={{ duration: 1 }}
                 className="notfound-container"
             >
-                {/* Animated 404 Number */}
                 <motion.h1
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -22,7 +21,6 @@ export default function NotFound() {
                     404
                 </motion.h1>
 
-                {/* Animated Text */}
                 <motion.p
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -32,14 +30,10 @@ export default function NotFound() {
                     Oops! The page you're looking for doesn't exist.
                 </motion.p>
 
-
-
                 <div className="mt-md">
                     <Link to="/" className={styles.Button}>Go Home</Link>
                 </div>
 
-
-                {/* Background Animation */}
                 <motion.div
                     className="notfound-bg"
                     animate={{ scale: [1, 1.2, 1] }}
