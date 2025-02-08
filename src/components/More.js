@@ -1,8 +1,14 @@
 import * as React from "react"
 import Card from '../components/Card'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Grid from '@mui/material/Grid';
+import {lazy, useEffect, useState} from "react";
+const Grid = lazy(() => import("@mui/material/Grid"));
 export default function More(){
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+    if (!isClient) return null;
     return (<>
          <Grid container spacing={2} justifyContent="center">
                 <Grid item xs={12} sm={6} md={4}>

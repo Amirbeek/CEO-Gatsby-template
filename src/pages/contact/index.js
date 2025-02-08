@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, {lazy, useEffect, useState} from "react";
 import {
     Typography,
     TextField,
     Button,
-    Grid,
     Snackbar,
     Alert,
     Paper,
 } from "@mui/material";
+const Grid = lazy(() => import("@mui/material/Grid"));
+
 import axios from "axios";
-import * as styles from "../../styles/ContactPage.module.css";
+import * as styles from "../../styles/contact.module.css";
 import Layout from "../../Layout";
 
 const Contact = () => {
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+    if (!isClient) return null;
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -104,7 +110,6 @@ const Contact = () => {
                                         "& .MuiOutlinedInput-root": {
                                             color: "var(--text-color)",
                                             "& .MuiOutlinedInput-notchedOutline": {
-                                                // borderColor: "",
                                                 borderWidth: "2px",
                                             },
                                             "&.Mui-focused": {
@@ -114,9 +119,6 @@ const Contact = () => {
                                                 },
                                             },
                                         },
-                                    }}
-                                    InputProps={{
-                                        classes: { root: styles.inputBase },
                                     }}
                                     InputLabelProps={{
                                         classes: { root: styles.inputLabel },
@@ -141,7 +143,6 @@ const Contact = () => {
                                         "& .MuiOutlinedInput-root": {
                                             color: "var(--text-color)",
                                             "& .MuiOutlinedInput-notchedOutline": {
-                                                // borderColor: "",
                                                 borderWidth: "2px",
                                             },
                                             "&.Mui-focused": {
@@ -152,9 +153,7 @@ const Contact = () => {
                                             },
                                         },
                                     }}
-                                    InputProps={{
-                                        classes: { root: styles.inputBase },
-                                    }}
+
                                     InputLabelProps={{
                                         classes: { root: styles.inputLabel },
                                     }}
@@ -176,7 +175,6 @@ const Contact = () => {
                                         "& .MuiOutlinedInput-root": {
                                             color: "var(--text-color)",
                                             "& .MuiOutlinedInput-notchedOutline": {
-                                                // borderColor: "",
                                                 borderWidth: "2px",
                                             },
                                             "&.Mui-focused": {
@@ -186,9 +184,6 @@ const Contact = () => {
                                                 },
                                             },
                                         },
-                                    }}
-                                    InputProps={{
-                                        classes: { root: styles.inputBase },
                                     }}
                                     InputLabelProps={{
                                         classes: { root: styles.inputLabel },
@@ -214,7 +209,6 @@ const Contact = () => {
                                         "& .MuiOutlinedInput-root": {
                                             color: "var(--text-color)",
                                             "& .MuiOutlinedInput-notchedOutline": {
-                                                // borderColor: "",
                                                 borderWidth: "2px",
                                             },
                                             "&.Mui-focused": {
@@ -224,9 +218,6 @@ const Contact = () => {
                                                 },
                                             },
                                         },
-                                    }}
-                                    InputProps={{
-                                        classes: { root: styles.inputBase },
                                     }}
                                     InputLabelProps={{
                                         classes: { root: styles.inputLabel },
@@ -245,7 +236,6 @@ const Contact = () => {
                                         "& .MuiOutlinedInput-root": {
                                             color: "var(--text-color)",
                                             "& .MuiOutlinedInput-notchedOutline": {
-                                                // borderColor: "",
                                                 borderWidth: "2px",
                                             },
                                             "&.Mui-focused": {
@@ -256,7 +246,7 @@ const Contact = () => {
                                             },
                                         },
                                     }}
-                                    sx={{
+                                    style={{
                                         mt: 2,
                                         backgroundColor: "#5a2de4",
                                         borderRadius: 2,

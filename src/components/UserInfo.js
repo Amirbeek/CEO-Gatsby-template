@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import Img from "gatsby-image";
 
 const UserInfo = ({ Image, fixedDate }) => {
+
     return (
         <Box
             sx={{

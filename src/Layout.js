@@ -21,7 +21,7 @@ export default function Layout({ children }) {
                     },
                 }}
             >
-                {children}
+                    {children}
             </Container>
             <Footer />
         </ThemeProvider>

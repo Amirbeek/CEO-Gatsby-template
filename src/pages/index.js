@@ -6,12 +6,17 @@ import Body from "../components/Body";
 import Projects from "../components/Projects";
 import {Typography} from "@mui/material";
 import More from "../components/More";
+import {useEffect, useState} from "react";
 
 export default function Home({ data }) {
     const projects = data.site.siteMetadata.bld
     const icon =data.file.childImageSharp.fluid
     const imgData = data.allFile.edges
-
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+    if (!isClient) return null;
     return (
         <Layout>
             <Header Icon={icon} />
