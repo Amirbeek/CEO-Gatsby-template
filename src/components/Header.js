@@ -21,14 +21,11 @@ export default function Header() {
 
     return (
         <div className={styles.MainWrapper}>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+            <div
                 className={styles.Icon}
             >
                 <Img fluid={data.file.childImageSharp.fluid} />
-            </motion.div>
+            </div>
             <motion.h1
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
