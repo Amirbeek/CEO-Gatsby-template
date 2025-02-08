@@ -51,6 +51,7 @@
 
 .img-main-full {
     width: 100% !important;
+    height: 100%;
 }
 
 /* Card.module.css */
@@ -87,12 +88,14 @@
     font-weight: bold;
 }
 
-/* Hover effects */
 .funCard:hover .cardTitle {
     color:var(--text-color);
 }
-
-/* Responsive adjustments */
+@media (max-width: 899px) {
+    .img-main-full {
+        height: 400px;
+    }
+}
 @media (min-width: 768px) and (max-width: 992px) {
     .funCard {
         height: 360px;
