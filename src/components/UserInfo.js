@@ -28,7 +28,7 @@ const UserInfo = ({ Image, fixedDate }) => {
 
             <Box>
                 <Typography variant="body1" sx={{ fontWeight: "bold" ,color: 'var(--text-color)'}} >
-                    Amirbek Shomurodov
+                     Shomurodov
                 </Typography>
                 <Typography variant="body2" sx={{ color: "gray" }}>
                     {fixedDate}
