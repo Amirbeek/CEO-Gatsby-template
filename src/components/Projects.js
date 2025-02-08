@@ -77,7 +77,8 @@ export default function BodyProjects({ projects , imgData}) {
                         width: '100%',
                         height: `100%`,
 
-                    }} className={styles.bgWhite}>
+
+                    }} className={combinedImageClass}>
                         <a href={projects.links.Demo} target="_blank" rel="noopener noreferrer"  className={styles.imgMainFull} >
                             <Img fluid={images[0]}   style={{height: `100%`,width: '100%'}}/>
                         </a>
