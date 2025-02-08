@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import './styles/global.css';
 import { ThemeProvider } from "./context/ThemeContext";
@@ -6,6 +6,16 @@ import { Container } from "@mui/material";
 import Footer from "./components/Footer";
 
 export default function Layout({ children }) {
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const hasRefreshed = sessionStorage.getItem("hasRefreshed");
+            if (!hasRefreshed) {
+                sessionStorage.setItem("hasRefreshed", "true");
+                window.location.reload();
+            }
+        }
+    }, []);
+
     return (
         <ThemeProvider>
             <Navbar />
@@ -21,10 +31,9 @@ export default function Layout({ children }) {
                     },
                 }}
             >
-                    {children}
+                {children}
             </Container>
             <Footer />
         </ThemeProvider>
-
     );
 }
