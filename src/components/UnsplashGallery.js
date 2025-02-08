@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Typography, Grid } from "@mui/material";
+import React, {useState, useEffect, lazy} from "react";
+import { Typography } from "@mui/material";
+const Grid = lazy(() => import("@mui/material/Grid"));
 
 function UnsplashGallery() {
     const [photos, setPhotos] = useState([]);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
@@ -7,6 +7,11 @@ import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const IconComponents = ({ links }) => {
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+    if (!isClient) return null;
     const handleClick = () => {
         localStorage.setItem('project', JSON.stringify(links));
     };

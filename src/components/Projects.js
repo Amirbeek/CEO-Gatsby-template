@@ -1,12 +1,18 @@
 import * as React from "react";
 import * as styles from "../styles/body.module.css";
-import {Box, Grid, Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import IconComponents from "./IconComponents";
 import SafeTypography from "./SafeTypography";
-import {useCallback, useEffect, useRef, useState} from "react";
+import {lazy, useCallback, useEffect, useRef, useState} from "react";
 import Img from "gatsby-image";
+const Grid = lazy(() => import("@mui/material/Grid"));
 
 export default function BodyProjects({ projects , imgData}) {
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+    if (!isClient) return null;
     const divRef = useRef(null);
     const [divHeight, setDivHeight] = useState(0);
     const [images, setImages] = useState([]);
