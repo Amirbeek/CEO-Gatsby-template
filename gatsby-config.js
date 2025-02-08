@@ -82,7 +82,7 @@ module.exports = {
             "If you ever visited <a href='https://github.com/home'>GitHub's homepage</a>, you will notice a 3D globe that visualizes platform's current activity.<br/><br/>I decided to recreate it with <span>Three.js</span> and make the project open-source. I built the Globe using Vasco Asturiano's <a href='https://github.com/vasturiano/three-globe?tab=readme-ov-file'>three-globe</a> as base, shaded the 3D scene to resemble a dreamy space environment, and bundled everything with Webpack.<br/><br/>Additionally, the Globe visualizes my flight history across the world from 2022 to 2023. Deployed to <a href='https://vercel.com'>Vercel</a>.",
         links: {
           GitHub: "https://github.com/Amirbeek/github-globe-visualization",
-          PagePath: "/gitglobe",
+          PagePath: "/blog/gitglobe",
           Demo: "https://github-globe-visualization.vercel.app",
         },
         highlight: "Feature Highlight",
