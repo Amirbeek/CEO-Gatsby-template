@@ -12,11 +12,10 @@ const Footer = () => {
                 py: 4,
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center", // Centers all content
-                justifyContent: "center", // Centers vertically
+                alignItems: "center",
+                justifyContent: "center",
             }}
         >
-            {/* Social Media Icons */}
             <Box
                 sx={{
                     display: "flex",

@@ -1,15 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { CardContent, Typography, Box } from '@mui/material';
 
 
 import * as styles from '../styles/body.module.css'; 
 
 function Cards({ background, title, description, URL, children }) {
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-    if (!isClient) return null;
+
     function handleNavigation() {
         window.open(URL, '_blank', 'noopener,noreferrer');
     }

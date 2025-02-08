@@ -1,4 +1,4 @@
-import React, {lazy, useEffect, useState} from "react";
+import React, {lazy, useState} from "react";
 import {
     Typography,
     TextField,
@@ -14,11 +14,6 @@ import * as styles from "../../styles/contact.module.css";
 import Layout from "../../Layout";
 
 const Contact = () => {
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-    if (!isClient) return null;
     const [formData, setFormData] = useState({
         name: "",
         email: "",

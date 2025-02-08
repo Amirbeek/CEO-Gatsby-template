@@ -10,11 +10,6 @@ import Posts from '../../components/Posts'
 const Grid = lazy(() => import("@mui/material/Grid"));
 
 export default function Projects({data}) {
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-    if (!isClient) return null;
     const projects = data.project.nodes
     const Image = data.myImage.childImageSharp.fluid
     return (

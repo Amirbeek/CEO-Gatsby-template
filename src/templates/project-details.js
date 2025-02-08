@@ -53,17 +53,10 @@ const ProjectDetails = ({ data }) => {
     const isAlbum = slug === "myalbum";
     let sanitizedContent = rawMarkdownBody;
 
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-    if (!isClient) return null;
 
     useEffect(() => {
         if (typeof window !== "undefined") {
-
              sanitizedContent = rawMarkdownBody;
-
         }
     }, [rawMarkdownBody]);
 

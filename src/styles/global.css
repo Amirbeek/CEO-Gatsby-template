@@ -38,9 +38,26 @@
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
-html,body{
-    min-height: 100%;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120vw;
+    height: 120vh;
+    background: radial-gradient(circle, rgba(90, 45, 228, 0.06) 0%, rgba(90, 45, 228, 0.02) 50%, transparent 90%);
+    z-index: -1;
+    pointer-events: none;
+}
+
 .mt-md{
     margin-top: var( --space-md) !important;
 }
@@ -109,4 +126,49 @@ svg{
 }
 .text-nl{
     color: var(--text-color);
+}
+
+.notfound-bg {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--primary-color);
+    opacity: 0.1;
+    border-radius: 50%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .notfound-bg {
+        width: 120px;
+        height: 120px;
+        top: 25%;
+        left: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .notfound-bg {
+        width: 80px;
+        height: 80px;
+        top: 30%;
+        left: 50%;
+        opacity: 0.05;
+    }
+}
+.notfound-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    text-align: center;
+    position: relative;
+}
+.notfound-text {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 10px;
 }

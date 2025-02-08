@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from "gatsby-image";
 import { ReactTyped } from 'react-typed';
@@ -6,11 +6,7 @@ import { motion } from 'framer-motion';
 import * as styles from '../styles/header.module.css';
 
 export default function Header() {
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-    if (!isClient) return null;
+
     const data = useStaticQuery(graphql`
         query {
             file(relativePath: { eq: "sticker.webp" }) {

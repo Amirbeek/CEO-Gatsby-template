@@ -8,18 +8,13 @@ import Img from "gatsby-image";
 const Grid = lazy(() => import("@mui/material/Grid"));
 
 export default function BodyProjects({ projects , imgData}) {
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-    if (!isClient) return null;
     const divRef = useRef(null);
     const [divHeight, setDivHeight] = useState(0);
     const [images, setImages] = useState([]);
     const additionalExists = Array.isArray(projects.additional);
     const identify = additionalExists ? projects.additional.length : 0;
     const updateImages = useCallback(newImages => {
-        setImages(prevImages => [...new Set([...prevImages, ...newImages])]); 
+        setImages(prevImages => [...new Set([...prevImages, ...newImages])]);
     }, []);
 
     useEffect(() => {
@@ -57,10 +52,6 @@ export default function BodyProjects({ projects , imgData}) {
     if (!projects) {
         return <div>No projects available</div>;
     }
-
-
-
-
     const cardClass = identify > 0 ? 'universal-card-right p-5 ' : 'normal-card-right p-5 ';
     const combinedClass = `${cardClass} ${styles.bgWhite} ${styles.bgPadding}`;
     const cardImg = identify > 0 ? 'universal-card-left':'normal-card-left '
@@ -84,13 +75,11 @@ export default function BodyProjects({ projects , imgData}) {
                     <Box sx={{
                         overflow: 'hidden',
                         width: '100%',
-                        height: `${divHeight}px`,
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }} className={combinedImageClass}>
+                        height: `100%`,
+
+                    }} className={styles.bgWhite}>
                         <a href={projects.links.Demo} target="_blank" rel="noopener noreferrer"  className={styles.imgMainFull} >
-                            <Img fluid={images[0]}   style={{height: `${divHeight}px`}}/>
+                            <Img fluid={images[0]}   style={{height: `100%`,width: '100%'}}/>
                         </a>
                     </Box>
                 </Grid>
@@ -100,7 +89,7 @@ export default function BodyProjects({ projects , imgData}) {
                         {projects.additional.map((image, index) => (
                             <Grid item xs={12} md={6} key={index}>
                                 <div className={index === 0 ? 'uni_img-left' : 'uni_img-right'} style={{overflow: 'hidden',}}>
-                                   <Img fluid={images[index+1]} style={{height: `${divHeight}px` }}/>
+                                   <Img fluid={images[index+1]} style={{height: `564px` }}/>
                                 </div>
                             </Grid>
                         ))}
