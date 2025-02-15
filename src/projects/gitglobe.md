@@ -1,5 +1,5 @@
 ---
-title: Flight data visualization on a globe, inspired by Github's homepage
+title:  
 stack: Development
 slug: gitglobe
 date: 2021-01-03T00:00:00+00:00
@@ -12,7 +12,7 @@ If you visited [Github's homepage](https://github.com/home) recently, you probab
 **I wanted to re-create it.**
 
 ### Three-Globe
-
+    
 Doing a Portal Scene with in R3F and Three.js from scratch really helped me to familiarize myself with ThreeJS concepts. At first, I did not have any idea where to start. Luckily, I found a package named **three-globe** that allows users to display data on a globe. It had a pretty well-written documentation too. However, it was ugly and nowhere near to the globe design made by Github
 ![GithubHub homePage Image](/globe/beginning.png)
 

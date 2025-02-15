@@ -15,6 +15,7 @@ In crafting Tinthrove, I scoured numerous templates and visual assets from the [
 
 ### Creating the Color Classifier
 The Color Classifier was engineered using the K-Means clustering algorithm. This tool effectively groups similar colors from images, which simplifies the design process and enhances data visualization by providing a palette of dominant colors based on their **RGB values**.
+
 ```javascript
 def get_colors(image, number_of_colors):
     reshaped_image = image.reshape(image.shape[0] * image.shape[1], 3)
